@@ -8,9 +8,11 @@
   }
   
   body {
-    @apply bg-chalk-white text-gray-900;
+    @apply text-gray-900;
   }
 }
+
+
 
 @layer components {
   .btn-primary {

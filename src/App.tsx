@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Dashboard from './pages/Dashboard'
 import BlitzTracker from './pages/BlitzTracker'
+import Analyzer from './pages/Analyzer'
 import Analytics from './pages/Analytics'
 import Teams from './pages/Teams'
 import Games from './pages/Games'
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/tracker" element={<BlitzTracker />} />
+        <Route path="/analyzer" element={<Analyzer />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/games" element={<Games />} />

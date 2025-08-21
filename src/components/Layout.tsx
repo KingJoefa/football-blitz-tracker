@@ -28,6 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navigation = [
     { name: 'Dashboard', href: '/', icon: Home, description: 'Overview & Stats' },
     { name: 'Tracker', href: '/tracker', icon: Target, description: 'Record Blitzes' },
+    { name: 'Analyzer', href: '/analyzer', icon: TrendingUp, description: 'Visualize Plays' },
     { name: 'Analytics', href: '/analytics', icon: BarChart3, description: 'Charts & Trends' },
     { name: 'Teams', href: '/teams', icon: Users, description: 'Team Stats' },
     { name: 'Games', href: '/games', icon: Calendar, description: 'Schedule & Results' },
@@ -46,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{background: 'linear-gradient(135deg, #bfdbfe 0%, #d1d5db 50%, #fecaca 100%)'}}>
       {/* Top Navigation Bar */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -203,35 +204,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       )}
 
-      {/* Page Header with Breadcrumb */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="py-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">{getPageTitle()}</h1>
-                <p className="text-sm text-gray-600 mt-1">{getPageDescription()}</p>
-              </div>
-              
-              {/* Page-specific actions */}
-              <div className="hidden sm:flex items-center space-x-3">
-                {location.pathname === '/analytics' && (
-                  <button className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50">
-                    <TrendingUp className="mr-2 h-4 w-4" />
-                    Export Report
-                  </button>
-                )}
-                {location.pathname === '/tracker' && (
-                  <button className="flex items-center px-3 py-2 text-sm font-medium text-white bg-nfl-blue rounded-lg hover:bg-blue-700">
-                    <Plus className="mr-2 h-4 w-4" />
-                    New Blitz
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       {/* Main content */}
       <main className="flex-1">

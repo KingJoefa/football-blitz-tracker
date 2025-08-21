@@ -6,7 +6,8 @@ import {
   Calendar,
   Plus,
   Search,
-  BarChart3
+  BarChart3,
+  Play
 } from 'lucide-react'
 
 const Dashboard: React.FC = () => {
@@ -54,11 +55,11 @@ const Dashboard: React.FC = () => {
       color: 'bg-nfl-blue'
     },
     {
-      name: 'Search Patterns',
-      description: 'Find similar blitz scenarios',
-      icon: Search,
-      href: '/analytics',
-      color: 'bg-green-600'
+      name: 'Visualize Plays',
+      description: 'Diagram formations and blitz patterns',
+      icon: Play,
+      href: '/analyzer',
+      color: 'bg-orange-600'
     },
     {
       name: 'View Analytics',
